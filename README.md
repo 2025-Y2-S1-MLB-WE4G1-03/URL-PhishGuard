@@ -60,17 +60,17 @@ URL-PhishGuard/
 │   ├── raw/                                 # Original dataset
 │   └── external/                            # External reference datasets
 ├── notebooks/
-│   ├── IT_M1_URL_Length.ipynb               # M1: URL Length Analysis
-│   ├── IT_M2_Char_Counts.ipynb              # M2: Character Count Analysis
-│   ├── IT_M3_IP_Detection.ipynb             # M3: IP Detection Analysis
-│   ├── IT_M4_Depth_Count.ipynb              # M4: Depth Analysis
-│   ├── IT_M5_Scaling_Norm.ipynb             # M5: Scaling & Normalization
-│   ├── IT_M6_Selection_Encoding.ipynb       # M6: Feature Selection
-│   └── group_pipeline.ipynb                 # Integrated pipeline
+│   ├── IT24103625_M1_URL_Length.ipynb          # M1: URL Length Analysis
+│   ├── IT24100950_M2_Char_Counts.ipynb         # M2: Character Count Analysis
+│   ├── IT24103925_M3_IP_Detection.ipynb        # M3: IP Detection Analysis
+│   ├── IT24103016_M4_Depth_Count.ipynb         # M4: Depth Analysis
+│   ├── IT24100659_M5_Scaling_Norm.ipynb        # M5: Scaling & Normalization
+│   ├── IT24104208_M6_Selection_Encoding.ipynb  # M6: Feature Selection
+│   └── group_pipeline.ipynb                    # Integrated pipeline
 ├── results/
-│   ├── eda_visualizations/                  # Generated plots and charts
-│   ├── logs/                                # Execution logs
-│   └── outputs/                             # Processed datasets and features
+│   ├── eda_visualizations/                     # Generated plots and charts
+│   ├── logs/                                   # Execution logs
+│   └── outputs/                                # Processed datasets and features
 ```
 
 ### Execution Order
