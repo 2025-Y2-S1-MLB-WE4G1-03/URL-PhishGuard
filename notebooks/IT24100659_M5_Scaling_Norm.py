@@ -13,10 +13,10 @@ import os
 data_path = "phishing_site_urls.csv"
 
 if not os.path.exists(data_path):
-    raise FileNotFoundError(f"❌ Dataset not found at: {data_path}")
+    raise FileNotFoundError(f" Dataset not found at: {data_path}")
 
 df = pd.read_csv(data_path)
-print("✅ Data loaded successfully")
+print(" Data loaded successfully")
 print("Data shape:", df.shape)
 print(df.head())
 
@@ -30,14 +30,14 @@ df['has_https'] = df['URL'].str.startswith('https').astype(int)
 # 3. Select Numerical Features
 # ================================
 numeric_features = ['url_length', 'num_dots', 'num_slashes', 'has_https']
-print("\n🔢 Numeric Features:", numeric_features)
+print("\n Numeric Features:", numeric_features)
 
 
 # ================================
 # 4. Handle Missing Values
 # ================================
 if df[numeric_features].isnull().values.any():
-    print("⚠️ Missing values detected. Filling with median...")
+    print(" Missing values detected. Filling with median...")
     df[numeric_features] = df[numeric_features].fillna(df[numeric_features].median())
 
 # ================================
@@ -69,8 +69,8 @@ for feature_to_plot in numeric_features:
     plt.show()
 
     # Print range comparison
-    print(f"\n📊 Original range of '{feature_to_plot}': {df[feature_to_plot].min()} to {df[feature_to_plot].max()}")
-    print(f"📈 Scaled range of '{feature_to_plot}': {df_scaled[feature_to_plot].min()} to {df_scaled[feature_to_plot].max()}")
+    print(f"\n  Original range of '{feature_to_plot}': {df[feature_to_plot].min()} to {df[feature_to_plot].max()}")
+    print(f" Scaled range of '{feature_to_plot}': {df_scaled[feature_to_plot].min()} to {df_scaled[feature_to_plot].max()}")
 
 
 # ================================
@@ -81,7 +81,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 output_path = os.path.join(output_dir, "features_scaled.csv")
 df_scaled.to_csv(output_path, index=False)
-print(f"✅ Scaled dataset saved at: {output_path}")
+print(f"  Scaled dataset saved at: {output_path}")
 
 # 8. Check class balance /Class Balance Visualization
 print(df['Label'].value_counts())
